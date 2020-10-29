@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DontSleep", "DontSleep\DontSleep.csproj", "{E9E26BE8-2CAB-4651-AACD-F2B7E454CD2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9E26BE8-2CAB-4651-AACD-F2B7E454CD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E26BE8-2CAB-4651-AACD-F2B7E454CD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E26BE8-2CAB-4651-AACD-F2B7E454CD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E26BE8-2CAB-4651-AACD-F2B7E454CD2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52BDA31B-39E2-41C4-8EED-3C191A10F965}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://sgdctfs:8080/tfs/sgdc
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DontSleep\\DontSleep.csproj
+		SccProjectName1 = DontSleep
+		SccLocalPath1 = DontSleep
+	EndGlobalSection
+EndGlobal
