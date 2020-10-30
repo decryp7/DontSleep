@@ -1,18 +1,4 @@
-﻿#region FileHeader
-// (c) Copyright 2020 - Yokogawa Electric Corporation.
-// All Right Reserved
-// 
-// This software [both binary and source (if released)] (hereafter, Software)
-// is intellectual property owned by Yokogawa Electric Corporation and is
-// copyright of Yokogawa Electric Corporation in all countries in the world,
-// and ownership remains with Yokogawa Electric Corporation.
-// 
-// Origin:
-// 
-// Description:
-#endregion
-
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 
 namespace DontSleep
