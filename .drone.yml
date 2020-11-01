@@ -8,4 +8,16 @@ platform:
 steps:
 - name: compile
   commands:
-  - Invoke-MsBuild -Path DontSleep.sln -ShowBuildOutputInCurrentWindow
+  - Invoke-MsBuild -Path DontSleep.sln -ShowBuildOutputInCurrentWindow -PassThru
+- name: create compressed package
+  commands:
+    - Compress-Archive -Path DontSleep\bin\Debug\*.* -DestinationPath DontSleep.zip
+- name: upload artifacts
+  environment:
+    repo_username:
+      from_secret: repo_username
+    repo_password:
+      from_secret: repo_password
+  commands:
+    - $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $env:repo_username,$env:repo_password)))
+    - Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)} -uri https://repository.decryptology.net/repository/artifacts/DontSleep/DontSleep.zip -Method Put -Infile DontSleep.zip
