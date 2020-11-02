@@ -14,10 +14,9 @@ steps:
     - Compress-Archive -Path DontSleep\bin\Debug\*.* -DestinationPath DontSleep.zip
 - name: upload artifacts
   environment:
-    repo_username:
-      from_secret: repo_username
-    repo_password:
-      from_secret: repo_password
+    access_key:
+      from_secret: access_key
+    secret_key:
+      from_secret: secret_key
   commands:
-    - $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $env:repo_username,$env:repo_password)))
-    - Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $base64AuthInfo)} -uri https://repository.decryptology.net/repository/artifacts/DontSleep/DontSleep.zip -Method Put -Infile DontSleep.zip
+    - Write-S3Object -AccessKey $env:access_key -SecretKey $env:secret_key -BucketName DontSleep -File DontSleep.zip -EndpointUrl https://s3.decryptology.net/artifacts
